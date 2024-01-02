@@ -1,0 +1,21 @@
+# Préface {.unnumbered}
+
+Ce guide vise à fournir les outils et les connaissances en géomatique nécessaires à la réalisation des travaux aux étudiants du cours GAE-3010 : Concepts et applications de l'agriculture de précision. 
+
+Ce cours sera réalisé sur le logiciel QGIS. Il ne s'agit pas d'un manuel de référence complet et les étudiants sont invités à consulter directement la documentation des différents outils proposés afin d'obtenir les informations à jour.
+
+## Table des matières {.unnumbered}
+
+1. [Introduction](intro.qmd)
+2. [Introduction aux SIG](sig.qmd)
+3. [Données vectorielles](vector.qmd)
+4. [Données matricielles](raster.qmd)
+5. [Systèmes de coordonnées](src.qmd)
+6. [Cartographie](carto.qmd)
+7. [Analyses spatiales](analyses-spatiales.qmd)
+8. [Interpolation spatiale](interpolation.qmd)
+9. [Télédétection optique et radar](teledetection.qmd)
+
+Concepts et applications de l'agriculture de précision de <a xmlns:cc="http://creativecommons.org/ns#" href="https://chavalli.github.io/agriculture-de-precision/" property="cc:attributionName" rel="cc:attributionURL">Charles Frenette-Vallières</a> est mis à la disposition selon les termes de la [Licence Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International ![](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
+
+Fondé(e) sur une œuvre à [https://github.com/chavalli/agriculture-de-precision](https://github.com/chavalli/agriculture-de-precision).

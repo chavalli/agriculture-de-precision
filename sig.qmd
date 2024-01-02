@@ -1,0 +1,105 @@
+# Introduction aux SIG
+
+Si on vous demande ce qu'est un SIG, plusieurs répondront sans doute qu'il s'agit d'un logiciel de cartographie. Or, c'est beaucoup plus que ça.
+
+Les Systèmes d'information géographique (SIG) sont plutôt un ensemble de logiciels, d'outils et de méthodes portant sur [l'acquisition, le stockage, l'analyse, la gestion et la restitution des données géographiques](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358590/systeme-dinformation-geographique). Ils permettent notamment aux utilisateurs de contextualiser les données dans l'espace et de représenter efficacement l'information pour favoriser une prise de décision éclairée.
+
+## Les 5 composantes des SIG
+
+On considère souvent que les SIG regroupent 5 composantes principales : Le **matériel**, les **logiciels**, les **données**, les **personnes** et les **procédures**.
+
+### Matériel
+
+Le matériel regroupe tous les éléments physiques permettant l'acquisition, le stockage, le traitement ou l'affichage des données. On y retrouve par exemple :
+
+#### Acquisition {.unnumbered}
+
+- Les systèmes de géolocalisation (GPS)
+- Le matériel d'acquisition (capteurs automatisés ou systèmes manuels)
+- Les capteurs passifs (images multispectrales ou hyperspectrales, photographies, instruments de mesures environnementales)
+- Les capteurs actifs (radar, lidar, pénétromètres)
+- Le support (drones, tracteurs, avions, satellites)
+- Acquisiteurs de données (ordinateurs, GPS, carnet de notes, datalogger)
+
+#### Stockage {.unnumbered}
+
+- Temporaire (cartes SD, clés USB, disques SATA/SSD)
+- Long terme (serveurs, disques SATA/SSD, cartes ou photographies imprimées)
+
+#### Traitement {.unnumbered}
+
+- Ordinateur personnel vs serveur
+- Certains dataloggers
+- Processeur
+- Cartes graphiques
+
+#### Affichage {.unnumbered}
+
+- Écrans
+- Imprimantes
+
+### Logiciels
+
+Plusieurs types de logiciels font partie de l'environnement des SIG.
+
+#### Logiciels de SIG
+
+Les logiciels de SIG sont multiples et diversifiés et permettent généralement de regrouper les données, les traitements et l'affichage en un seul logiciel. Ces logiciels sont centraux dans un SIG, et peuvent suffire à bien des utilisateurs en raison de leur polyvalence.
+
+- [QGIS](https://www.osgeo.org/projects/qgis/) / [GRASS](https://www.osgeo.org/projects/grass-gis/) (*opensource* et gratuit)
+- [ArcGIS](https://www.esri.com/fr-fr/arcgis/about-arcgis/overview) (propriétaire et payant)
+- [Google Earth](https://www.google.ca/earth/) (propriétaire et gratuit selon l'utilisation)
+- [AutoCAD Map 3D](https://www.autodesk.com/ca-fr/products/autocad-map-3d?plc=ACDIST&term=1-YEAR&support=ADVANCED&quantity=1) (propriétaire et payant)
+
+Dans le cadre de ce cours, nous utiliseront le logiciel QGIS ([documentation](https://qgis.org/fr/docs/index.html#)). Celui-ci est *opensource* et gratuit, tout en permettant une vaste étendue de traitements et d'analyses, ce qui en fait un bon candidat pour un apprentissage. On peut aussi utiliser GRASS et travailler directement en python, ce qui le rend très polyvalent. Les outils proposés durant ce cours sont aussi disponibles sous ArcGIS et portent souvent le même nom, si bien que l'apprentissage d'un premier logiciel rend plus aisé le transfert vers un autre dans le futur. 
+Il est à noter que dans l'industrie, ArcGIS demeure la référence à plusieurs niveaux et, bien que très dispendieux, offre l'avantage d'un support technique et d'une plus grande stabilité des outils proposés. Les outils d'analyse spatiale sont très avancés et fiables. La [documentation d'ESRI](https://desktop.arcgis.com/fr/documentation/) (compagnie d'ArcGIS) est bien développée et demeure un document de référence utile dans votre flux de travail.
+
+#### Logiciels de gestion de bases de données à référence spatiale
+
+Dans le cadre de ce cours, les données brutes vous seront fournies pour l'exécution de vos travaux, et le volume de données sera restreint. Toutefois, les données géospatiales peuvent rapidement devenir très volumineuse et l'utilisation d'une base de données à référence spatiale est alors indispensable pour bénéficier d'une stabilité, d'une structure et d'une rapidité accrue. Ce cours ne porte pas sur les bases de données à référence spatiale, mais voici tout de même deux exemples de logiciels souvent utilisés dans le domaine.
+
+- [PostgreSQL](https://www.postgresql.org/) (avec l'ajout de l'extension [PostGIS](https://postgis.net/))
+- [Oracle](https://www.oracle.com/database/spatial/)
+
+#### Logiciels d'analyse spatiale
+
+L'analyse spatiale et le traitement d'images sont des domaines spécialisés. Il existe de nombreux logiciels permettant de répondre à différents objectifs. Voici quelques exemples.
+
+- **Géostatistiques** : [GS+](https://geostatistics.com/) est un logiciel entièrement dédié aux géostatistiques. Si votre objectif est de pousser vos analyses de semivariogrammes en considérant par exemple l'anisotropie, ce logiciel est un excellent outil.
+- **Analyses d'images** : En télédétection et en analyse d'images, on cherche souvent à effectuer des calculs entre les différentes bandes des images ou à faire une classification de la surface pour déterminer, par exemple, l'occupation du territoire ou le type de végétation. Des logiciels comme [Catalyst](https://catalyst.earth/) (anciennement Geomatica) ou [ENVI](https://www.nv5geospatialsoftware.com/Products/ENVI) sont spécialisés dans ces opérations et intègrent de nombreux outils statistiques d'analyse d'images. Mention spéciale à [Google Earth Engine](https://earthengine.google.com/) qui permet l'acquisition et le traitement d'images satellites simplement directement sur le serveur par l'entremise de scripts `Javascript` directement dans votre navigateur.
+- **Autres** : De nombreux autres logiciels peuvent faire partie de votre environnement de SIG, tout dépendant des particularités de votre projet. Les logiciels de catalogage, de photogrammétrie, de serveur, ou même les logiciels spécialisés pour vos outils (ex. Loggernet) font partie de cette catégorie. De plus, différents langages de programmation permettent de plus en plus l'intégration des données géospatiales, notamment `R` ([R Spatial](https://rspatial.org/)) ou `python` ([Python GIS](https://pythongis.org/)), à l'aide de librairies spécialisées contenant des outils d'analyse géospatiale.
+
+### Données
+
+Les données sont le coeur des SIG. Elles constituent l'ensemble des informations, spatialisées ou non, contribuant au projet ou à la problématique.
+
+Quelques exemples de données :
+
+- Images satellites
+- Réseau hydrique ou réseau routier
+- Agricoles : Limites et identifiants des champs, type de culture, régie de culture, teneur en eau du sol, pédologie, etc.
+- Tables de référence (taux d'application en fonction du pH, degrés jours, etc.)
+- Données environnementales
+- Mesures directes sur le terrain
+
+Les données peuvent être sous différentes formes, que ce soit de simples notes dans un carnet ou sous forme informatique. Dans les prochains chapitres, vous apprendrez que les données géospatiales peuvent être au format [vectoriel](vector.qmd) ou [matriciel](raster.qmd).
+
+### Personnes
+
+Dans tout projet, plusieurs personnes doivent être considérées, et ont un usage différent des SIG.
+
+- **Gestionnaire** : Responsable de la détermination et de l'atteinte des objectifs du projet.
+- **Analyste** : Généralement la personne qui utilise les logiciels SIG et qui détermine les procédures à effectuer sur les données.
+- **Programmeur** : Pour des projets plus élaborés, les programmeurs optimisent la base de données et l'environnement de travail. Ils permettent d'effectuer des analyses plus complexes ou sur des jeux de données plus volumineux.
+- **Fournisseur de données** : Peuvent être externes (organismes gouvernementaux et les plateformes de données ouvertes, USGS pour les images satellitaires, etc.) ou internes (ex. technicien d'acquisition des données pour le projet)
+- **Utilisateur** : L'utilisateur final des SIG. Il est important de considérer le niveau de connaissances de l'utilisateur dans les choix de communication. (ex. client, agronome, producteur, etc.)
+
+### Procédures
+
+Il s'agit des étapes de traitements et d'analyses à effectuer sur les données et des méthodes de travail. Les procédures peuvent viser la transformation, l'analyse ou la communication des informations géospatiales.
+
+## Open Geospatial Consortium (OGC)
+
+Au même titre que les normes ISO dans plusieurs domaines, il existe des normes et standards pour les données géospatiales et les SIG. L'organisme international responsable de diffuser ces normes est l'[Open Geospatial consortium (OGC)](https://www.ogc.org/). Il n'est pas obligatoire de respecter ces normes, mais je vous suggère fortement de le faire. Cette pratique permet une meilleure interopérabilité entre les applications et vous évitera de nombreux maux de têtes dans le futur.
+
+La fondation [Open Source Geospatial Foundation](https://www.osgeo.org/) propose plusieurs outils et logiciels (incluant ceux utilisés dans ce cours) qui respectent tous les normes de l'OGC.
