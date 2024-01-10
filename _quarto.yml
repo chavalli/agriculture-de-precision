@@ -7,12 +7,12 @@ book:
   author: 
     - name: "Charles Frenette-Vallières"
     # - name: "Nicholas Lefebvre"
-  date: "2023-12-31"
-  cover-image: cover.png
+  date: "2024-01-09"
+  repo-url: https://github.com/chavalli/agriculture-de-precision/
+  cover-image: images/cover.png
   chapters:
     - index.qmd
     - intro.qmd
-    # - summary.qmd
     - sig.qmd
     - vector.qmd
     - raster.qmd
@@ -27,9 +27,8 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
-  pdf:
-    documentclass: scrbook
-
-editor: source
+    theme: flatly
+    toc: true
+  # pdf:
+  #   documentclass: scrbook
 

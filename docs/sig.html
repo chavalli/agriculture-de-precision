@@ -90,6 +90,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Concepts et applications de l’agriculture de précision</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/chavalli/agriculture-de-precision/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -183,7 +186,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#personnes" id="toc-personnes" class="nav-link" data-scroll-target="#personnes"><span class="header-section-number">2.1.4</span> Personnes</a></li>
   <li><a href="#procédures" id="toc-procédures" class="nav-link" data-scroll-target="#procédures"><span class="header-section-number">2.1.5</span> Procédures</a></li>
   </ul></li>
-  <li><a href="#open-geospatial-consortium-ogc" id="toc-open-geospatial-consortium-ogc" class="nav-link" data-scroll-target="#open-geospatial-consortium-ogc"><span class="header-section-number">2.2</span> Open Geospatial Consortium (OGC)</a></li>
+  <li><a href="#votre-premier-logiciel-de-sig-qgis" id="toc-votre-premier-logiciel-de-sig-qgis" class="nav-link" data-scroll-target="#votre-premier-logiciel-de-sig-qgis"><span class="header-section-number">2.2</span> Votre premier logiciel de SIG : QGIS</a></li>
+  <li><a href="#installation-et-configuration" id="toc-installation-et-configuration" class="nav-link" data-scroll-target="#installation-et-configuration"><span class="header-section-number">2.3</span> Installation et configuration</a>
+  <ul class="collapse">
+  <li><a href="#installateur-osgeo4w" id="toc-installateur-osgeo4w" class="nav-link" data-scroll-target="#installateur-osgeo4w"><span class="header-section-number">2.3.1</span> Installateur OSGeo4W</a></li>
+  <li><a href="#installation-séparée-de-grass-et-qgis" id="toc-installation-séparée-de-grass-et-qgis" class="nav-link" data-scroll-target="#installation-séparée-de-grass-et-qgis"><span class="header-section-number">2.3.2</span> Installation séparée de GRASS et QGIS</a></li>
+  <li><a href="#utilisation-dun-poste-de-travail-virtuel-ptv" id="toc-utilisation-dun-poste-de-travail-virtuel-ptv" class="nav-link" data-scroll-target="#utilisation-dun-poste-de-travail-virtuel-ptv"><span class="header-section-number">2.3.3</span> Utilisation d’un Poste de Travail Virtuel (PTV)</a></li>
+  <li><a href="#bonus-compiler-et-installer-les-fichiers-binaires" id="toc-bonus-compiler-et-installer-les-fichiers-binaires" class="nav-link" data-scroll-target="#bonus-compiler-et-installer-les-fichiers-binaires"><span class="header-section-number">2.3.4</span> Bonus : Compiler et installer les fichiers binaires</a></li>
+  </ul></li>
+  <li><a href="#tour-dhorizon-de-linterface" id="toc-tour-dhorizon-de-linterface" class="nav-link" data-scroll-target="#tour-dhorizon-de-linterface"><span class="header-section-number">2.4</span> Tour d’horizon de l’interface</a></li>
+  <li><a href="#open-geospatial-consortium-ogc" id="toc-open-geospatial-consortium-ogc" class="nav-link" data-scroll-target="#open-geospatial-consortium-ogc"><span class="header-section-number">2.5</span> Open Geospatial Consortium (OGC)</a></li>
   </ul>
 </nav>
     </div>
@@ -192,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction aux SIG</span></h1>
+<h1 class="title"><span id="sec-sig" class="quarto-section-identifier"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction aux SIG</span></span></h1>
 </div>
 
 
@@ -207,6 +219,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<hr>
+<p><strong>Objectifs spécifiques</strong>:</p>
+<p>À la fin de ce chapitre, vous</p>
+<ul>
+<li>connaîtrez les 5 composantes principales des SIG</li>
+<li>aurez une version fonctionnelle de QGIS sur votre ordinateur personnel ou,</li>
+<li>aurez accès à QGIS sur un poste de travail virtuel</li>
+<li>aurez dans votre poche de nombreuses ressources sur les SIG à consulter durant la session et dans le futur.</li>
+</ul>
+<hr>
 <p>Si on vous demande ce qu’est un SIG, plusieurs répondront sans doute qu’il s’agit d’un logiciel de cartographie. Or, c’est beaucoup plus que ça.</p>
 <p>Les Systèmes d’information géographique (SIG) sont plutôt un ensemble de logiciels, d’outils et de méthodes portant sur <a href="https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358590/systeme-dinformation-geographique">l’acquisition, le stockage, l’analyse, la gestion et la restitution des données géographiques</a>. Ils permettent notamment aux utilisateurs de contextualiser les données dans l’espace et de représenter efficacement l’information pour favoriser une prise de décision éclairée.</p>
 <section id="les-5-composantes-des-sig" class="level2" data-number="2.1">
@@ -262,7 +284,6 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.google.ca/earth/">Google Earth</a> (propriétaire et gratuit selon l’utilisation)</li>
 <li><a href="https://www.autodesk.com/ca-fr/products/autocad-map-3d?plc=ACDIST&amp;term=1-YEAR&amp;support=ADVANCED&amp;quantity=1">AutoCAD Map 3D</a> (propriétaire et payant)</li>
 </ul>
-<p>Dans le cadre de ce cours, nous utiliseront le logiciel QGIS (<a href="https://qgis.org/fr/docs/index.html#">documentation</a>). Celui-ci est <em>opensource</em> et gratuit, tout en permettant une vaste étendue de traitements et d’analyses, ce qui en fait un bon candidat pour un apprentissage. On peut aussi utiliser GRASS et travailler directement en python, ce qui le rend très polyvalent. Les outils proposés durant ce cours sont aussi disponibles sous ArcGIS et portent souvent le même nom, si bien que l’apprentissage d’un premier logiciel rend plus aisé le transfert vers un autre dans le futur. Il est à noter que dans l’industrie, ArcGIS demeure la référence à plusieurs niveaux et, bien que très dispendieux, offre l’avantage d’un support technique et d’une plus grande stabilité des outils proposés. Les outils d’analyse spatiale sont très avancés et fiables. La <a href="https://desktop.arcgis.com/fr/documentation/">documentation d’ESRI</a> (compagnie d’ArcGIS) est bien développée et demeure un document de référence utile dans votre flux de travail.</p>
 </section>
 <section id="logiciels-de-gestion-de-bases-de-données-à-référence-spatiale" class="level4" data-number="2.1.2.2">
 <h4 data-number="2.1.2.2" class="anchored" data-anchor-id="logiciels-de-gestion-de-bases-de-données-à-référence-spatiale"><span class="header-section-number">2.1.2.2</span> Logiciels de gestion de bases de données à référence spatiale</h4>
@@ -312,8 +333,102 @@ ul.task-list li input[type="checkbox"] {
 <p>Il s’agit des étapes de traitements et d’analyses à effectuer sur les données et des méthodes de travail. Les procédures peuvent viser la transformation, l’analyse ou la communication des informations géospatiales.</p>
 </section>
 </section>
-<section id="open-geospatial-consortium-ogc" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="open-geospatial-consortium-ogc"><span class="header-section-number">2.2</span> Open Geospatial Consortium (OGC)</h2>
+<section id="votre-premier-logiciel-de-sig-qgis" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="votre-premier-logiciel-de-sig-qgis"><span class="header-section-number">2.2</span> Votre premier logiciel de SIG : QGIS</h2>
+<p>Dans le cadre de ce cours, nous utiliserons le logiciel QGIS (<a href="https://qgis.org/fr/docs/index.html#">documentation</a>). Il s’agit d’un logiciel <em>libre</em> (<em>opensource</em>) et gratuit à la fois assez complet et polyvalent.</p>
+<blockquote class="blockquote">
+<p>« Logiciel libre » <em>[free software]</em> désigne des logiciels qui respectent la liberté des utilisateurs. En gros, cela veut dire que <strong>les utilisateurs ont la liberté d’exécuter, copier, distribuer, étudier, modifier et améliorer ces logiciels.</strong> Ainsi, « logiciel libre » fait référence à la liberté, pas au prix (pour comprendre ce concept, vous devez penser à « liberté d’expression », pas à « entrée libre »). - <a href="https://www.gnu.org/philosophy/free-sw.fr.html">Projet GNU</a></p>
+</blockquote>
+<p>QGIS permet une vaste étendue de traitements et d’analyses spatiales, ce qui en fait un bon candidat pour un premier apprentissage. On peut aussi utiliser GRASS avec QGIS et travailler directement en Python, ce qui le rend très polyvalent et adaptable à différents flux de travail. La connexion avec des bases de données, par exemple avec PostGreSQL et PostGIS, est simple, tout comme l’accès à des services web (WMS, WFS, fonds de carte, etc.). Les outils proposés durant ce cours sont aussi disponibles sous ArcGIS et portent souvent le même nom, si bien que l’apprentissage d’un premier logiciel rend plus aisé le transfert vers un autre dans le futur.</p>
+<p>Il est à noter que bien qu’on puisse <em>presque</em> tout faire avec QGIS, le logiciel propriétaire ArcGIS demeure la référence à plusieurs niveaux dans l’industrie et, bien que très dispendieux, offre l’avantage d’un support technique et parfois d’une plus grande stabilité des outils proposés. Les outils d’analyse spatiale sont très avancés et fiables. La <a href="https://desktop.arcgis.com/fr/documentation/">documentation d’ESRI</a> (compagnie d’ArcGIS) est bien développée et demeure un document de référence utile à consulter dans votre flux de travail.</p>
+</section>
+<section id="installation-et-configuration" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="installation-et-configuration"><span class="header-section-number">2.3</span> Installation et configuration</h2>
+<p>Les logiciels de SIG demandent beaucoup de ressources à votre ordinateur. Si vous disposez d’un ordinateur suffisamment performant, je vous suggère de faire l’installation de QGIS directement sur votre machine. Sinon, en étudiant à l’Université Laval, vous disposez d’un accès aux postes de travail virtuels (PTV) pour pouvoir travailler à distance sur le serveur de l’Université. Il existe plusieurs méthodes d’installation de QGIS. Je vous en propose 3, selon votre système d’exploitation et vos ambitions.</p>
+<ul>
+<li>Installateur OSGeo4W :fortement suggéré si vous êtes sous Windows</li>
+<li>Sous Linux ou MacOS (ou Windows), installation directe de QGIS et GRASS séparément</li>
+<li>Utilisation d’un poste de travail virtuel (si vous êtes étudiant à l’Université Laval)</li>
+<li>Bonus : Construction à partir des fichiers source ou binaires.</li>
+</ul>
+<section id="installateur-osgeo4w" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="installateur-osgeo4w"><span class="header-section-number">2.3.1</span> Installateur OSGeo4W</h3>
+<p>Si vous disposez d’un ordinateur avec un système d’exploitation Windows et des spécifications suffisantes (QGIS ne propose pas de spécifications minimales, mais certaines analyses spatiales peuvent être exigeantes et les données satellites peuvent être très volumineuses), l’installation suggérée est d’utiliser l’<a href="https://grass.osgeo.org/download/windows/#OSGeo4W">installateur OSGeo4W</a>. Cela vous permet de faire une installation simultanée de QGIS, GDAL (qui contient des librairies d’analyses spatiales) et GRASS GIS, et est de loin la méthode la plus stable et la plus conviviale. Le mieux est d’installer tous les <em>packages</em> mentionnés ici, vous en aurez besoin à un moment ou à un autre.</p>
+<p>Cette installation est simple, vous n’avez qu’à suivre les <a href="https://grasswiki.osgeo.org/wiki/Installation_Guide#OSGeo4W_installer">instructions</a> et à télécharger la version qui vous convient à <a href="https://grass.osgeo.org/download/windows/#OSGeo4W">cette adresse</a>.</p>
+</section>
+<section id="installation-séparée-de-grass-et-qgis" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="installation-séparée-de-grass-et-qgis"><span class="header-section-number">2.3.2</span> Installation séparée de GRASS et QGIS</h3>
+<p>Si vous n’êtes pas sous windows, vous devrez installer chaque logiciel de façon séparée.</p>
+<p>Lors de l’installation, il est souvent préférable de commencer par installer GRASS, puis ensuite installer QGIS; de cette façon, QGIS trouve tous les <em>packages</em> déjà installés avec GRASS, et les versions sont les bonnes. Le contraire peut entraîner de mauvaises surprises, et le mieux est souvent de prendre l’installation à zéro. Les instructions pour chaque distribution de Linux, ou pour MacOS, sont détaillés à <a href="https://grasswiki.osgeo.org/wiki/Installation_Guide">cette adresse</a>. Il est probable que vous ayez des erreurs lors de l’installation ou de la première ouverture de votre logiciel : Si c’est le cas, lisez attentivement les messages d’erreur, il est fort probable qu’il vous manque un <em>package</em>, qu’une version ne soit pas à jour ou qu’un fichier soit au mauvais endroit sur votre ordinateur (si par exemple vous avez déjà une installation de Python, il est possible que des conflits soient créés entre les versions). Internet devient alors votre meilleur ami pour trouver des solutions d’installation (ainsi que le forum du cours).</p>
+<p>Une fois GRASS bien installé, vous pouvez passez à QGIS. Cette fois, suivez simplement les <a href="https://qgis.org/fr/site/forusers/download.html">instructions</a> officielles, et tout devrait bien aller (en principe).</p>
+</section>
+<section id="utilisation-dun-poste-de-travail-virtuel-ptv" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="utilisation-dun-poste-de-travail-virtuel-ptv"><span class="header-section-number">2.3.3</span> Utilisation d’un Poste de Travail Virtuel (PTV)</h3>
+<p>Si, pour une raison ou une autre, vous ne pouvez pas ou ne voulez pas installer QGIS sur votre ordinateur personnel, la faculté de génie offre des postes de travail virtuels qui vous permettent d’ouvrir une session sur le serveur de l’Université (les autres facultés ont aussi pour la plupart des services similaires). Je vous invite à consulter directement la page du service <a href="https://libert.fsg.ulaval.ca/utilitaires/poste-de-travail-virtuel-ptv/">LiberT</a> et à suivre les instructions. Si vous éprouvez des difficultés, n’hésitez pas à contacter l’équipe de support technique.</p>
+</section>
+<section id="bonus-compiler-et-installer-les-fichiers-binaires" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="bonus-compiler-et-installer-les-fichiers-binaires"><span class="header-section-number">2.3.4</span> Bonus : Compiler et installer les fichiers binaires</h3>
+<p>Je ne vous encourage pas à procéder de cette façon, mais une installation en compilant les fichiers binaires vous permet d’accéder aux outils les plus récents et ceux qui sont parfois en développement. Je ne donnerai pas ici les consignes d’installation, que vous trouverez facilement sur internet, parce que ce type d’installation est plus complexe et souffre parfois de problème de stabilité. Il est pertinent toutefois de savoir que cette méthode existe puisque si vous en venez un jour à développer des extensions et des outils d’analyse sur QGIS, vous risquez de travailler avec les versions en développement.</p>
+</section>
+</section>
+<section id="tour-dhorizon-de-linterface" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="tour-dhorizon-de-linterface"><span class="header-section-number">2.4</span> Tour d’horizon de l’interface</h2>
+<p>Lorsque vous lancez votre application, votre interface devrait ressembler à quelque chose comme ça.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-sig-interface" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/02_sig-interface.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.1: Exemple d’une interface simple de QGIS.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Vous ne savez pas par où commencer? C’est normal. La première étape sera de configurer votre environnement de travail pour qu’il réponde à vos besoins, il peut différer du mien. Certains éléments sont toutefois des incontournables, par exemple l’explorateur de fichiers. Avant d’aller plus loin, voici une visite guidée de mon interface de travail personnelle.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-sig-interface-annotations" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/02_sig-interface-annotations.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.2: Exemple d’une interface annotée de QGIS.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>1. Barre de menu</strong></p>
+<p>Prenez le temps d’explorer les différents onglets de cette barre. C’est ici que vous accéderez à la plupart des outils, que ce soit pour configurer votre environnement de travail, votre projet, pour générer une carte, afficher un fond de carte tiré d’internet (ex. Google Map) ou alors pour trouver des outils s’appliquant aux couches vectorielles (Vecteur) ou matricielles (Raster).</p>
+<p><strong>2. Outils rapides</strong></p>
+<p>Les outils les plus fréquents se retrouvent dans cette barre, notamment les outils de simple navigation (loupes, règles, etc.). La plupart des outils sont appliqués par défaut sur la couche présentement sélectionnée (dans la boîte 5 – Couches du projet). Vous pouvez rapidement sélectionner des attributs, ouvrir la calculatrice de champs, entrer en mode édition d’une couche et ajouter, modifier ou retirer des points, ajouter des étiquettes ou créer rapidement une nouvelle couche de donnée. Vous pouvez aussi accéder à la console python et travailler en python si vous êtes à l’aise avec ce langage, ou encore ajouter un service web (ex. WMS).</p>
+<p><strong>3. Gestionnaire des couches</strong></p>
+<p>Cette boîte permet en un clic d’ajouter des couches sur la carte. Vous pouvez accéder aux même outils dans l’onglet Couche du menu.</p>
+<p><strong>4. Explorateur de fichiers</strong></p>
+<p>L’explorateur vous permet d’accéder aux fichiers dans votre ordinateur. Vous pouvez y configurer des raccourcis pour accéder rapidement aux données d’un projet. Pour la plupart des données, il suffit de glisser la couche à partir de l’explorateur vers l’environnement pour importer rapidement dans votre projet une ou plusieurs couches de données à la fois.</p>
+<p><strong>5. Couches du projet</strong></p>
+<p>Cette boîte affiche les couches importées dans votre projet. Vous pouvez modifier l’ordre de superposition des couches en modifiant l’ordre dans cette liste, les couches en haut étant priorisées dans la superposition. Vous pouvez cocher ou décocher la case pour afficher ou non une couche. Un symbole représentant la symbologie est présent. Pour accéder aux informations d’une couche, il suffit de faire un clic droit sur celle-ci (consulter les propriétés, ouvrir la table d’attributs, modifier la symbologie, afficher ou modifier les étiquettes, etc.) Les options que vous consulterez le plus souvent sont : Zoomer sur la couche, ouvrir la table d’attribut et propriétés.</p>
+<p><strong>6. Environnement de travail</strong></p>
+<p>C’est ici que sont affichées vos couches. Plusieurs des outils rapides sont appliqués en cliquant directement sur l’environnement de travail. Pour une carte rapide, vous pouvez simplement faire une saisie d’écran de cet espace, mais la bonne pratique consiste plutôt à créer une nouvelle mise en page via l’onglet Projet du menu (à voir plus loin dans le laboratoire).</p>
+<p><strong>7. Outil statistique</strong></p>
+<p>Ici, vous pouvez rapidement choisir une couche et un champ d’attribut et y consulter les statistiques de base (Nombre, somme, moyenne, médiane, etc.) Cet outil est très utile pour les couches quantitatives (ex. arpentage dans ce laboratoire).</p>
+<p><strong>8. Barre à outils de traitements</strong></p>
+<p>Vous pouvez accéder ici à tous les outils de traitements pouvant être effectués sur des couches. Si vous connaissez le nom d’un outil, le plus simple est d’utiliser l’option Rechercher.</p>
+<p><strong>9. Barre d’état</strong></p>
+<p>La barre d’état au bas de l’écran vous permet de consulter et de modifier rapidement le SCR du projet (en bas à droite, via le bouton du code EPSG). Vous pouvez aussi fixer l’échelle, modifier l’orientation du Nord de la carte et visualiser les coordonnées ou les messages d’erreur.</p>
+<blockquote class="blockquote">
+<p><strong>Exercice :</strong> Personnalisez votre interface en ouvrant l’onglet <em>Préférences</em> (<a href="#fig-sig-panneaux">Figure&nbsp;<span>2.3</span></a>) et en ajoutant les panneaux que vous souhaitez (vous pouvez copier mon interface pour le moment et l’ajuster dans le futur selon vos besoins).</p>
+</blockquote>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-sig-panneaux" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/02_sig-panneaux.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;2.3: Personnalisation de l’interface en ajoutant les panneaux souhaités.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="open-geospatial-consortium-ogc" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="open-geospatial-consortium-ogc"><span class="header-section-number">2.5</span> Open Geospatial Consortium (OGC)</h2>
 <p>Au même titre que les normes ISO dans plusieurs domaines, il existe des normes et standards pour les données géospatiales et les SIG. L’organisme international responsable de diffuser ces normes est l’<a href="https://www.ogc.org/">Open Geospatial consortium (OGC)</a>. Il n’est pas obligatoire de respecter ces normes, mais je vous suggère fortement de le faire. Cette pratique permet une meilleure interopérabilité entre les applications et vous évitera de nombreux maux de têtes dans le futur.</p>
 <p>La fondation <a href="https://www.osgeo.org/">Open Source Geospatial Foundation</a> propose plusieurs outils et logiciels (incluant ceux utilisés dans ce cours) qui respectent tous les normes de l’OGC.</p>
 
