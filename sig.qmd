@@ -13,7 +13,7 @@
 
 ---
 
-Si on vous demande ce qu'est un SIG, plusieurs répondront sans doute qu'il s'agit d'un logiciel de cartographie. Or, c'est beaucoup plus que ça.
+Si on vous demande ce qu'est un SIG, plusieurs répondront sans doute qu'il s'agit d'un logiciel de cartographie. Or, la cartographie ne représente qu'un des nombreux aspect d'un SIG.
 
 Les Systèmes d'information géographique (SIG) sont plutôt un ensemble de logiciels, d'outils et de méthodes portant sur [l'acquisition, le stockage, l'analyse, la gestion et la restitution des données géographiques](https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8358590/systeme-dinformation-geographique). Ils permettent notamment aux utilisateurs de contextualiser les données dans l'espace et de représenter efficacement l'information pour favoriser une prise de décision éclairée.
 

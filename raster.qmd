@@ -1,3 +1,10 @@
+# Données matricielles {#sec-raster}
+
 ---
-title: "Données matricielles"
----
+
+
+sont quant à elles constituées de pixels contenant chacun une valeur (par exemple la couleur d'une photographie). La résolution des données matricielles varie en fonction du nombre et de la taille des pixels, alors qu'elle varie seulement en fonction du nombre de sommets pour les données vectorielles. Les données vectorielles sont donc beaucoup moins volumineuses et peuvent contenir une table attributaire plus complète. 
+
+
+
+Ajouter une couche matricielle ![](https://docs.qgis.org/3.28/fr/_images/mActionAddRasterLayer.png)

@@ -4,20 +4,19 @@
 
 Ce guide vise à fournir les outils et les connaissances en géomatique nécessaires à la réalisation des travaux aux étudiants du cours GAE-3010 : Concepts et applications de l'agriculture de précision. 
 
-Ce cours sera réalisé sur le logiciel QGIS. Il ne s'agit pas d'un manuel de référence complet et les étudiants sont invités à consulter directement la documentation des différents outils proposés afin d'obtenir les informations à jour.
+Ce cours sera réalisé sur le logiciel QGIS. Il ne s'agit pas d'un manuel de référence complet et les étudiants sont invités à consulter directement la documentation des différents outils proposés afin d'obtenir les informations les plus à jour.
 
 ## Table des matières {.unnumbered}
 
-1. [Introduction](intro.qmd)
-2. [Introduction aux SIG](sig.qmd)
-3. [Données vectorielles](vector.qmd)
-4. [Données matricielles](raster.qmd)
-5. [Systèmes de coordonnées](src.qmd)
-6. [Cartographie](carto.qmd)
-7. [Analyses spatiales](analyses-spatiales.qmd)
-8. [Interpolation spatiale](interpolation.qmd)
-9. [Télédétection optique et radar](teledetection.qmd)
+1. [Introduction aux SIG](sig.qmd)
+2. [Données vectorielles](vector.qmd)
+3. [Données matricielles](raster.qmd)
+4. [Systèmes de coordonnées](src.qmd)
+5. [Cartographie](carto.qmd)
+6. [Analyses spatiales](analyses-spatiales.qmd)
+7. [Interpolation spatiale](interpolation.qmd)
+8. [Télédétection optique et radar](teledetection.qmd)
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://chavalli.github.io/agriculture-de-precision/">Concepts et applications de l'agriculture de précision</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/chavalli/agriculture-de-precision">Charles Frenette-Vallières</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://chavalli.github.io/agriculture-de-precision/">Concepts et applications de l'agriculture de précision</a> par <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/chavalli/agriculture-de-precision">Charles Frenette-Vallières</a>  est mis à disposition selon les termes de la <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> 
 
 Fondé(e) sur une œuvre à [https://github.com/chavalli/agriculture-de-precision](https://github.com/chavalli/agriculture-de-precision).
