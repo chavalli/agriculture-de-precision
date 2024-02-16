@@ -4,6 +4,8 @@ Ce guide vise à fournir les outils et les connaissances en géomatique nécessa
 
 Ce cours sera réalisé sur le logiciel QGIS. Il ne s'agit pas d'un manuel de référence complet et les étudiants sont invités à consulter directement la documentation des différents outils proposés afin d'obtenir les informations à jour.
 
+> Note : La rédaction de ce manuel est interrompue pour une durée indéterminée.
+
 ## Table des matières
 
 1. [Introduction](https://chavalli.github.io/agriculture-de-precision/index.html)
